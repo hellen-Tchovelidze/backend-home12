@@ -1,0 +1,18 @@
+[
+  {
+    "id": 2,
+    "content": "satesto",
+    "email": "test@example.com",
+    "createdAt": "2025-05-18T21:08:55.909Z",
+    "updatedAt": "2025-05-18T21:08:55.909Z"
+  },
+  {
+    "id": 3,
+    "content": "test test",
+    "email": "test@example.com",
+    "imageUrl": "https://res.cloudinary.com/drd9dzmb4/image/upload/v1747915193/uploads/sjkkpugplmojcgqacnd4.jpg",
+    "imageId": "uploads/sjkkpugplmojcgqacnd4",
+    "createdAt": "2025-05-22T11:59:55.343Z",
+    "updatedAt": "2025-05-22T11:59:55.343Z"
+  }
+]
