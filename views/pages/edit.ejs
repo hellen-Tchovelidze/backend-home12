@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Expense</title>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  <h1>Edit Expense</h1>
+  <form action="/<%= expense.id %>/edit" method="POST" enctype="multipart/form-data">
+    <label>Content:</label>
+    <input type="text" name="content" value="<%= expense.content %>" required /><br /><br />
+
+    <label>Email:</label>
+    <input type="email" name="email" value="<%= expense.email %>" required /><br /><br />
+
+    <label>Amount:</label>
+    <input type="number" name="amount" value="<%= expense.amount %>" step="0.01" required /><br /><br />
+
+    <% if (expense.imageUrl) { %>
+      <img src="<%= expense.imageUrl %>" width="200" /><br />
+    <% } %>
+
+    <label>Change Image:</label>
+    <input type="file" name="image" accept="image/*" /><br /><br />
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

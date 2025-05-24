@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create New Expense</title>
+ <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  <h1>Create New Expense</h1>
+  <form action="/new" method="POST" enctype="multipart/form-data">
+    <label for="content">Content:</label>
+    <input type="text" id="content" name="content" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="amount">Amount ($):</label>
+    <input type="number" id="amount" name="amount" step="0.01" min="0" required />
+
+    <label for="image">Image (optional):</label>
+    <input type="file" id="image" name="image" accept="image/*" />
+
+    <button type="submit">Create Expense</button>
+  </form>
+  <a href="/">⬅ Back to list</a>
+</body>
+</html>

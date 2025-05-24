@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expenses List</title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <h1>All Expenses</h1>
+    <a href="/new">Create New Expense</a>
+    <ul>
+      <% expenses.forEach(expense => { %>
+      <li>
+        <strong><%= expense.content %></strong>  $<%= isNaN(expense.amount) ?
+        '0.00' : expense.amount.toFixed(2) %><br />
+
+        <% if (expense.imageUrl) { %>
+        <img
+          src="<%= expense.imageUrl %>"
+          alt="Expense Image"
+          width="150"
+        /><br />
+        <% } %>
+
+        <a href="/<%= expense.id %>/details">Details</a> |
+        <a href="/<%= expense.id %>/edit">Edit</a>
+        <form
+          action="/<%= expense.id %>/delete"
+          method="POST"
+          style="display: inline"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
